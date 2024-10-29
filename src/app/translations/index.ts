@@ -11,6 +11,12 @@ const translations = {
         en: 'Back to all articles',
         fr: 'Retour à tous les articles'
       }
+    },
+    articleFooter: {
+      title: {
+        en: 'Related articles',
+        fr: 'Articles connexes'
+      }
     }
   }
 };

@@ -22,6 +22,9 @@ export default async function Article({ params }: ArticlePageParams) {
   const { title, subTitle, image, content } = article;
   const linkToHomePageText = translations.articlePage.navigation.goHomeLinkText[locale];
   const linkToHomePage = `/${locale}`;
+  const articleFooterTitle = `
+    ${translations.articlePage.articleFooter.title[locale]}: ...
+  `;
 
   return (
     <main>
@@ -51,7 +54,9 @@ export default async function Article({ params }: ArticlePageParams) {
           <section>
             <div>{content}</div>
           </section>
-          <footer>Related articles: ...</footer>
+          <footer className={articlePageStyle.articleFooter}>
+            {articleFooterTitle}
+          </footer>
         </div>
       </article>
     </main>
