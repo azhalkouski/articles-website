@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import "../../../globals.css";
 
-export const metadata: Metadata = {
-  title: "Article", // ! TODO: do something about these titles
-  description: "This is an article about something you might be interested in.",
-};
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const { slug } = await params;
 
-export default function RootLayout({
+  return {
+    title: `Article: ${slug}`,
+    description: `Read the article about "${slug}"`,
+  };
+}
+
+export default function ArticlePageLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

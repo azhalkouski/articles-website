@@ -14,8 +14,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Articles Magazine",
-  description: "A website serving articles from multple locales",
+  title: "Articles Magazine App",
+  description: `Multi-tenant static site generation app.
+    Will redirect to default locale`,
 };
 
 export default function RootLayout({

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../globals.css";
+import { Locale } from "../types";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -13,12 +14,16 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "Articles Magazine",
-  description: "A website serving articles from multple locales",
-};
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = await params;
 
-export default function RootLayout({
+  return {
+    title: `Tranding articles in  ${locale}`,
+    description: `A website serving tranding articles in ${locale}`,
+  };
+}
+
+export default function LocalizedArticlesPageLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
