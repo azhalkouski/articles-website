@@ -1,17 +1,18 @@
 import ArticlePreviewLink from './ArticlePreviewLink';
-import { ArticleT } from  '../../types';
+import { ArticleT, Locale } from  '../../types';
 
 interface ArticlesListProps {
-  articles: ArticleT[]
+  articles: ArticleT[],
+  selectedLocale: Locale
 }
 
-function ArticlesList({ articles }: ArticlesListProps) {
+function ArticlesList({ articles, selectedLocale }: ArticlesListProps) {
 
   return (
     <div>
       {articles.map((atricle) => (
         <div key={atricle.id}>
-          <ArticlePreviewLink article={atricle}/>
+          <ArticlePreviewLink article={atricle} selectedLocale={selectedLocale} />
         </div>
       ))}
     </div>

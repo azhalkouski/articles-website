@@ -1,18 +1,21 @@
 import Link from 'next/link';
 
-import { ArticleT } from "@/app/types";
+import { ArticleT, Locale } from "@/app/types";
 
 import styles from './articlePreviewLink.module.css';
 
 interface ArticlePreviewLinkProps {
-  article: ArticleT
+  article: ArticleT,
+  selectedLocale: Locale
 }
 
-function ArticlePreviewLink({ article }: ArticlePreviewLinkProps) {
+function ArticlePreviewLink({ article, selectedLocale }: ArticlePreviewLinkProps) {
+
+  const articleLocalizedSlug = `${selectedLocale}/${article.slug}`;
 
   return (
     <div>
-      <Link href={article.slug}>
+      <Link href={articleLocalizedSlug}>
         <h2 className={styles.previewTitle}>{article.title}</h2>
       </Link>
     </div>

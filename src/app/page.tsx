@@ -1,10 +1,15 @@
-import ArticlesPageComponent from './components/ArticlesPageComponent';
+import { redirect } from 'next/navigation';
+
+import { DEFAULT_LOCALE } from './constants';
 import { ArticlesPageDynamicParams } from './types';
 
 
-export default function Home({ params }: ArticlesPageDynamicParams) {
+export default async function Home({ params }: ArticlesPageDynamicParams) {
+  const { locale } = params;
 
-  return (
-    <ArticlesPageComponent params={params} />
-  );
+  if (locale === undefined) {
+    redirect(`/${DEFAULT_LOCALE}`);
+  }
+
+  return null;
 }

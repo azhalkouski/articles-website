@@ -11,8 +11,6 @@ import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from '../constants';
 import styles from "../page.module.css";
 
 
-
-
 export default async function ArticlesPageComponent({
   params,
 }: ArticlesPageDynamicParams) {
@@ -28,8 +26,6 @@ export default async function ArticlesPageComponent({
 
   const localizedArticles = articles[selectedLocale as Locale] || [];
 
-  console.log('selectedLocale', selectedLocale);
-
   return (
     <div className={styles.page}>
       <header>
@@ -41,7 +37,10 @@ export default async function ArticlesPageComponent({
         < h1>{headerTitle}</h1>
       </header>
       <main className={styles.main}>
-        <ArticlePreviewsList articles={localizedArticles} />
+        <ArticlePreviewsList
+          articles={localizedArticles}
+          selectedLocale={selectedLocale}
+        />
       </main>
       <footer className={styles.footer}>
        footer

@@ -1,16 +1,11 @@
 "use client";
 
-import { DEFAULT_LOCALE } from '../constants';
 import { LocaleEnum } from '../types';
 
 export default function LocaleSelector({ currentLocale = 'en' }) {
 
   const handleLocaleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    let newLocale = event.target.value;
-
-    if (newLocale === DEFAULT_LOCALE) {
-      newLocale = '';
-    }
+    const newLocale = event.target.value;
 
     const newPath = `/${newLocale}`;
     window.location.href = newPath;
