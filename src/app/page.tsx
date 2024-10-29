@@ -1,10 +1,10 @@
 import { redirect } from 'next/navigation';
 
 import { DEFAULT_LOCALE } from './constants';
-import { ArticlesPageDynamicParams } from './types';
+import { ArticlesHomepageParams } from './types';
 
 
-export default async function Home({ params }: ArticlesPageDynamicParams) {
+export default async function Home({ params }: ArticlesHomepageParams) {
   const { locale } = params;
 
   if (locale === undefined) {

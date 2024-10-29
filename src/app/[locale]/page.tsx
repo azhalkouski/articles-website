@@ -1,10 +1,10 @@
-import ArticlesPageComponent from '../components/ArticlesPageComponent';
-import { ArticlesPageDynamicParams } from '../types';
+import ArticlesPageContainer from '../components/articlesPageContainer';
+import { ArticlesHomepageParams } from '../types';
 
 
-export default function Home({ params }: ArticlesPageDynamicParams) {
+export default function Home({ params }: ArticlesHomepageParams) {
 
   return (
-    <ArticlesPageComponent params={params} />
+    <ArticlesPageContainer params={params} />
   );
-}
+};

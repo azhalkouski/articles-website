@@ -11,8 +11,7 @@ type ArticleImage = {
   storyBehindImage: string;
 }
 
-// ! TODO: rename to ArticlesHomepageParams
-export type ArticlesPageDynamicParams = {
+export type ArticlesHomepageParams = {
   params: {
     locale: Locale
   }
@@ -24,7 +23,6 @@ export type ArticleT = {
   subTitle: string;
   slug: string;
   content: string;
-  imageURL?: string;
   image: ArticleImage
 }
 

@@ -3,6 +3,10 @@ const translations = {
     header: {
       en: 'Trending articles in your locale',
       fr: 'Articles tendances dans votre région'
+    },
+    footer: {
+      en: 'Footer',
+      fr: 'pied de page'
     }
   },
   articlePage: {
