@@ -14,6 +14,7 @@ export type ArticlesPageDynamicParams = {
 export type ArticleT = {
   id: number;
   title: string;
+  subTitle: string;
   slug: string;
   content: string;
   imageURL?: string;

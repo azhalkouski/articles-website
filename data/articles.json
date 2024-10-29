@@ -3,12 +3,14 @@
     {
       "id": 1,
       "title": "First Article",
+      "subTitle": "Article's subtitle",
       "slug": "first-article",
       "content": "This is the content of the first article."
     },
     {
       "id": 2,
       "title": "Second Article",
+      "subTitle": "Article's subtitle",
       "slug": "second-article",
       "content": "This is the content of the second article."
     }
@@ -17,12 +19,14 @@
     {
       "id": 1,
       "title": "Premier Article",
+      "subTitle": "Sous-titre de l'article",
       "slug": "premier-article",
       "content": "Ceci est le contenu du premier article."
     },
     {
       "id": 2,
       "title": "Deuxième Article",
+      "subTitle": "Sous-titre de l'article",
       "slug": "deuxieme-article",
       "content": "Ceci est le contenu du deuxième article."
     }
