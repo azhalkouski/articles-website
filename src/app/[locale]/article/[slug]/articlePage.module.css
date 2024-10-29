@@ -4,3 +4,13 @@ top: 0;
 width: 100%;
 background: #f2f3f5;
 }
+
+.articleFooter {
+  border-top: 1px solid #b0b2b5;
+  width: 100%;
+  text-align: center;
+}
+
+.articleFooterTitle {
+  margin-top: 20px;
+}

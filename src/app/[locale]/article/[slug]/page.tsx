@@ -55,7 +55,7 @@ export default async function Article({ params }: ArticlePageParams) {
             <div>{content}</div>
           </section>
           <footer className={articlePageStyle.articleFooter}>
-            {articleFooterTitle}
+            <h4 className={articlePageStyle.articleFooterTitle}>{articleFooterTitle}</h4>
           </footer>
         </div>
       </article>
