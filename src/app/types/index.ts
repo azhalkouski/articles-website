@@ -5,9 +5,16 @@ export enum LocaleEnum {
   FR = "fr"
 };
 
+type ArticleImage = {
+  src: string;
+  alt: string;
+  storyBehindImage: string;
+}
+
+// ! TODO: rename to ArticlesHomepageParams
 export type ArticlesPageDynamicParams = {
   params: {
-    locale?: Locale
+    locale: Locale
   }
 };
 
@@ -18,4 +25,12 @@ export type ArticleT = {
   slug: string;
   content: string;
   imageURL?: string;
+  image: ArticleImage
+}
+
+export type ArticlePageParams = {
+  params: {
+    locale: Locale;
+    slug: string;
+  }
 }

@@ -6,7 +6,7 @@ import articles from '../../../data/articles.json';
 
 import { ArticlesPageDynamicParams, Locale } from '../types';
 import translations from '../translations';
-import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from '../constants';
+import { SUPPORTED_LOCALES } from '../constants';
 
 import styles from "../page.module.css";
 
@@ -16,7 +16,7 @@ export default async function ArticlesPageComponent({
 }: ArticlesPageDynamicParams) {
   // after version 15, params is an async api and it needs to be awaited
   const { locale: localeParam } = await params;
-  const selectedLocale = localeParam || DEFAULT_LOCALE;
+  const selectedLocale = localeParam;
 
   if (!SUPPORTED_LOCALES.includes(selectedLocale)) {
     notFound();
