@@ -10,3 +10,11 @@ export type ArticlesPageDynamicParams = {
     locale?: Locale
   }
 };
+
+export type ArticleT = {
+  id: number;
+  title: string;
+  slug: string;
+  content: string;
+  imageURL?: string;
+}

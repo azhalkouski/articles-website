@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 
+import ArticlePreviewsList from './articlePreviewsList';
 import LocaleSelector from './LocaleSelector';
 import articles from '../../../data/articles.json';
 
@@ -40,13 +41,7 @@ export default async function ArticlesPageComponent({
         < h1>{headerTitle}</h1>
       </header>
       <main className={styles.main}>
-        <div>
-          {localizedArticles.map((atricle) => (
-            <div key={atricle.id}>
-              <h2>{atricle.title}</h2>
-            </div>
-          ))}
-        </div>
+        <ArticlePreviewsList articles={localizedArticles} />
       </main>
       <footer className={styles.footer}>
        footer

@@ -1,10 +1,30 @@
 {
   "en": [
-    { "id": 1, "title": "First Article", "slug": "first-article", "content": "This is the content of the first article." },
-    { "id": 2, "title": "Second Article", "slug": "second-article", "content": "This is the content of the second article." }
+    {
+      "id": 1,
+      "title": "First Article",
+      "slug": "first-article",
+      "content": "This is the content of the first article."
+    },
+    {
+      "id": 2,
+      "title": "Second Article",
+      "slug": "second-article",
+      "content": "This is the content of the second article."
+    }
   ],
   "fr": [
-    { "id": 1, "title": "Premier Article", "slug": "premier-article", "content": "Ceci est le contenu du premier article." },
-    { "id": 2, "title": "Deuxième Article", "slug": "deuxieme-article", "content": "Ceci est le contenu du deuxième article." }
+    {
+      "id": 1,
+      "title": "Premier Article",
+      "slug": "premier-article",
+      "content": "Ceci est le contenu du premier article."
+    },
+    {
+      "id": 2,
+      "title": "Deuxième Article",
+      "slug": "deuxieme-article",
+      "content": "Ceci est le contenu du deuxième article."
+    }
   ]
 }
