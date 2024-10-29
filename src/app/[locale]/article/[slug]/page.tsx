@@ -6,7 +6,8 @@ import articles from '../../../../../data/articles.json';
 import { ArticlePageParams, ArticleT } from '../../../types';
 import translations from '@/app/translations';
 
-import styles from "../../../page.module.css";
+import rootPageStyles from "../../../page.module.css";
+import articlePageStyle from "./articlePage.module.css";
 
 export default async function Article({ params }: ArticlePageParams) {
   const { locale, slug } = await params;
@@ -24,7 +25,7 @@ export default async function Article({ params }: ArticlePageParams) {
 
   return (
     <main>
-      <header>
+      <header className={articlePageStyle.headerWithNav}>
         <nav>
           <BackHomeLinkButton
             backHomeLink={linkToHomePage}
@@ -33,7 +34,7 @@ export default async function Article({ params }: ArticlePageParams) {
         </nav>
       </header>
       <article>
-        <div className={styles.page} >
+        <div className={rootPageStyles.page} >
           <header>
             <h2>{title}</h2>
             <p>{subTitle}</p>
