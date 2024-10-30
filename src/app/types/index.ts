@@ -12,9 +12,9 @@ type ArticleImage = {
 }
 
 export type ArticlesHomepageParams = {
-  params: {
+  params: Promise<{
     locale: Locale
-  }
+  }>
 };
 
 export type ArticleT = {
@@ -27,8 +27,12 @@ export type ArticleT = {
 }
 
 export type ArticlePageParams = {
-  params: {
+  params: Promise<{
     locale: Locale;
     slug: string;
-  }
+  }>
+}
+
+export interface ArticlesByLocale {
+  [locale: string]: ArticleT[];
 }

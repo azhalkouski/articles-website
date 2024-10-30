@@ -1,15 +1,17 @@
 "use client";
 
+import { useRouter } from 'next/navigation';
 import { Locale, LocaleEnum } from '../types';
 import { LOCALE_OPTION_EN, LOCALE_OPTION_FR } from '../constants';
 
 export default function LocaleSelector({ currentLocale }: { currentLocale: Locale; }) {
+  const router = useRouter();
 
   const handleLocaleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = event.target.value;
 
     const newPath = `/${newLocale}`;
-    window.location.href = newPath;
+    router.push(newPath);
   };
 
   return (

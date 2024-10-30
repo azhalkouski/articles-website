@@ -5,7 +5,7 @@ import { ArticlesHomepageParams } from './types';
 
 
 export default async function Home({ params }: ArticlesHomepageParams) {
-  const { locale } = params;
+  const { locale } = await params;
 
   if (locale === undefined) {
     redirect(`/${DEFAULT_LOCALE}`);

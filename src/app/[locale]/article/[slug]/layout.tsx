@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "../../../globals.css";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({
+  params
+}: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
 
   return {
