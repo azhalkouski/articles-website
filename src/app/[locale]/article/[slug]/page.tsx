@@ -2,12 +2,26 @@ import { notFound } from 'next/navigation';
 
 import Image from 'next/image';
 import BackHomeLinkButton from '@/app/components/backHomeLinkButton';
-import articles from '../../../../../data/articles.json';
-import { ArticlePageParams, ArticleT } from '../../../types';
+import articlesData from '../../../../../data/articles.json';
+import { ArticlesByLocale, ArticlePageParams, ArticleT } from '../../../types';
 import translations from '@/app/translations';
 
 import rootPageStyles from "../../../page.module.css";
 import articlePageStyle from "./articlePage.module.css";
+import { SUPPORTED_LOCALES } from '@/app/constants';
+
+const articles: ArticlesByLocale = articlesData as ArticlesByLocale;
+
+export async function generateStaticParams() {
+  const staticParams = SUPPORTED_LOCALES.map((locale) => {
+    return articles[locale].map(({ slug }) => ({
+      locale: locale,
+      slug: slug
+    }));
+  });
+
+  return staticParams.flat();
+}
 
 export default async function Article({ params }: ArticlePageParams) {
   const { locale, slug } = await params;
