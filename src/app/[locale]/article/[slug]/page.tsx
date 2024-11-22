@@ -56,18 +56,20 @@ export default async function Article({ params }: ArticlePageParams) {
             <h2>{title}</h2>
             <p>{subTitle}</p>
           </header>
-          <figure>
-            <Image
-              src={image.src}
-              width={500}
-              height={380}
-              alt={image.alt}
-            />
-            <figcaption>{image.storyBehindImage}</figcaption>
-          </figure>
-          <section>
-            <div>{content}</div>
-          </section>
+          <div>
+            <figure>
+              <Image
+                src={image.src}
+                width={500}
+                height={380}
+                alt={image.alt}
+              />
+              <figcaption>{image.storyBehindImage}</figcaption>
+            </figure>
+            <section>
+              <div>{content}</div>
+            </section>
+          </div>
           <footer className={articlePageStyle.articleFooter}>
             <h4 className={articlePageStyle.articleFooterTitle}>{articleFooterTitle}</h4>
           </footer>
